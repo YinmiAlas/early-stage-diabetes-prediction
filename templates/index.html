@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Early Stage Diabetes Risk Prediction</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Early Stage Diabetes Risk Prediction</span></h2>
+
+            <div class='description'>
+                <p>A Machine Learning Web App, Deployed using Heroku.</p>
+                <br>
+                <p>Answer Questions Below Following Instructions In Every Cell.</p>
+    		</div>
+    	</div>
+
+    
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+
+                <input class="form-input" type="text" name="Age" placeholder="Write Your Age"><br>
+                <input class="form-input" type="text" name="Gender" placeholder="Write your Gender, Ex: Male=1, Female=0"><br>
+                <input class="form-input" type="text" name="Polyuria" placeholder="Do you have Polyuria?, Ex: Yes=1, No=0"><br>
+                <input class="form-input" type="text" name="Polydipsia" placeholder="Do you have Polydipsia?, Ex: Yes=1, No=0"><br>
+                <input class="form-input" type="text" name="Sudden_weight_loss" placeholder="Have You Had Sudden Weight loss?, Ex: Yes=1, No=0"><br>
+                <input class="form-input" type="text" name="Weakness" placeholder="Do you have a Weakness?, Ex: Yes=1, No=0"><br>
+                <input class="form-input" type="text" name="Polyphagia" placeholder="Do you have Polyphagia?, Ex: Yes=1, No=0"><br>
+                <input class="form-input" type="text" name="Genital_thrush" placeholder="Do you have Genital Thrush?, Ex: Yes=1, No=0"><br>
+                <input class="form-input" type="text" name="Visual_blurring" placeholder="Do you have Visual Blurring?, Ex: Yes=1, No=0"><br>
+                <input class="form-input" type="text" name="Itching" placeholder="Do you have Itching?, Ex: Yes=1, No=0"><br>
+                <input class="form-input" type="text" name="Irritability" placeholder="Do you feel Irritability?, Ex: Yes=1, No=0"><br>
+                <input class="form-input" type="text" name="Delayed_healing" placeholder="Do you have Delayed Healing?, Ex: Yes=1, No=0"><br>
+                <input class="form-input" type="text" name="Partial_paresis" placeholder="Do you have Partial Paresis?, Ex: Yes=1, No=0"><br>
+                <input class="form-input" type="text" name="Muscle_stiffness" placeholder="Do you have Muscle Stiffness?, Ex: Yes=1, No=0"><br>
+                <input class="form-input" type="text" name="Alopecia" placeholder="Do you have Alopecia?, Ex: Yes=1, No=0"><br>
+                <input class="form-input" type="text" name="Obesity" placeholder="Have you been Obese?, Ex: Yes=1, No=0"><br>
+
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/YinmiAlas"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/yinmi-alas-9721b0162/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>Made by Yinmi Alas.</p>
+
+       </div>
+
+    </body>
+</html>
+<!DOCTYPE html>
+<html>
+<body>
